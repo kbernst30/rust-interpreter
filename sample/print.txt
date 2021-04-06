@@ -1,0 +1,4 @@
+print "hello world";
+print "Hello Compiler";
+print "Wat";
+print "I'm going to Disney World";

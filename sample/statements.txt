@@ -1,0 +1,14 @@
+let x = 123 + 456;
+print x;
+let y = "abc";
+let z = 111 + 1223 * 67;
+print z;
+z = 111 * 1223 + 67;
+print z;
+z = 3 - 2;
+print z;
+z = 10 / 2;
+print z;
+print y;
+x = 1.5 + 1.2;
+print x;

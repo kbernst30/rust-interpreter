@@ -1,0 +1,29 @@
+program : statement*
+
+statement :
+    | 'print' expression sc
+    | 'let' ident '=' expression sc
+    | ident '=' expression sc
+    | if_statement
+    | 'while' condition 'then' statement* 'end'
+
+if_statement   : 'if' condition 'then' statement* else_statement? 'end'
+else_statement :
+    | 'elseif' condition 'then' statement* else_statement?
+    | 'else' statement*
+
+condition : expression (("==" | "!=" | ">" | ">=" | "<" | "<=") expression)+
+
+expression :
+    | literal
+    | term (( "-" | "+" ) term)*
+
+term : unary (( "/" | "*" ) unary)*
+
+unary : ("+" | "-")? primary
+
+primary : number | ident
+
+literal : string | number
+
+sc : ";"

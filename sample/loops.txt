@@ -1,0 +1,13 @@
+let x = 0;
+while x < 10 then
+  x = x + 1;
+  print x;
+end
+
+x = 0;
+while x < 10 then
+  x = x + 1;
+  if x > 5 then
+    print x;
+  end
+end
